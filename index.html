@@ -64,37 +64,136 @@
         <main>
             <section id="welcome">
                 <h2>Bine ati venit!</h2>
-                <a href="https://google.com">Ceva</a>
-                <img src="./resurse/imagini/gpu.jpg" alt="imagine gpu" width="300px" />
+                <figure>
+                    <img
+                        srcset="
+                            ./resurse/imagini/gpu_small.jpg   300w,
+                            ./resurse/imagini/gpu_medium.jpg  600w,
+                            ./resurse/imagini/gpu_large.jpg  1200w
+                        "
+                        sizes="(max-width: 600px) 300px,
+                               (max-width: 900px) 600px,
+                               1200px"
+                        src="./resurse/imagini/gpu_large.jpg"
+                        alt="imagine gpu"
+                    />
+                    <figcaption>GPU</figcaption>
+                </figure>
+                <p>Bine ati venit pe pagina noastra - <b>PC PartsPicker</b></p>
+                <br />
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum
+                    Speram sa putem sa va ajutam sa va alegeti componentele
+                    dorite pentru <b>PC-ul</b> dumneavoastra
                 </p>
             </section>
             <section id="promotii">
                 <h2>Promotii</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum
-                </p>
+                <p></p>
                 <section>
-                    <h3>bauow bgau fuoawvguoavwf uaowvfuawv</h3>
+                    <h3>Oferte Procesoare</h3>
+                    <p>
+                        Profitati de reducerile noastre de primavara la
+                        <b>procesoare</b>
+                    </p>
+                    <strong
+                        >O reducere de <s>10%</s> <ins>20%</ins> la toate
+                        procesoarele</strong
+                    >
+                    <a
+                        href="https://static.vecteezy.com/system/resources/previews/039/001/585/mp4/cpu-float-up-spin-release-power-circuit-pattern-video.mp4"
+                        target="videoFrame"
+                        >Procesor</a
+                    >
+                </section>
+                <section>
+                    <h3>Oferte Placi Video</h3>
+                    <p>
+                        Profitati de reducerile noastre de primavara la
+                        <b>placi video</b>
+                    </p>
+                    <strong
+                        >O reducere de <s>8%</s> <ins>15%</ins> la toate placile
+                        video</strong
+                    >
+                    <a
+                        href="https://static.vecteezy.com/system/resources/previews/035/289/748/mp4/big-black-contemporary-gaming-graphics-card-on-white-background-loopable-spinning-closeup-view-free-video.mp4"
+                        target="videoFrame"
+                        >Placa Video</a
+                    >
+                </section>
+                <iframe
+                    name="videoFrame"
+                    width="560"
+                    height="315"
+                    src="https://static.vecteezy.com/system/resources/previews/035/289/748/mp4/big-black-contemporary-gaming-graphics-card-on-white-background-loopable-spinning-closeup-view-free-video.mp4"
+                    title="video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                >
+                </iframe>
+                <section>
+                    <h2>Parteneri</h2>
+                    <p>
+                        Suntem mandri sa va anuntam ca am incheiat un
+                        parteneriat cu <b>EasyBox</b> pentru livrarea produselor
+                        noastre
+                        <a href="https://sameday.ro/easybox/" target="_blank"
+                            >mai multe informatii</a
+                        >
+                    </p>
                 </section>
             </section>
+            <section>
+                <h2>Intrebari frecvente</h2>
+                <details>
+                    <summary>Ce metode de plata acceptati?</summary>
+                    <p>Acceptam plata cu cardul, ramburs sau transfer bancar</p>
+                </details>
+                <details>
+                    <summary>Care este termenul de livrare?</summary>
+                    <p>Livrarea se face in 24h de la confirmarea comenzii</p>
+                </details>
+                <details>
+                    <summary>Care este termenul de garantie?</summary>
+                    <p>
+                        Toate produsele noastre beneficiaza de garantie 24 luni
+                    </p>
+                </details>
+            </section>
         </main>
-
-        <footer></footer>
+        <br />
+        <footer>
+            <a href="#">Intoarce-te sus</a>
+            <a href="./resurse/Terms_of_Use.pdf" download="Terms_of_Use.pdf"
+                >Terms of Use</a
+            >
+            <address>
+                <strong>Contactați-ne:</strong>
+                <br />
+                Telefon: <a href="tel:+40123456789">+40 123 456 789</a>
+                <br />
+                Adresă:
+                <a
+                    href="https://maps.google.com/?q=Facultatea+de+Matematica+si+Informatica"
+                    target="_blank"
+                    >Facultatea de Matematică și Informatică</a
+                >
+                <br />
+                E-mail:
+                <a href="mailto:contact@pcpartspicker.ro"
+                    >contact@pcpartspicker.ro</a
+                >
+                <br />
+                Chat:<a href="skype:live:example?chat">Skype</a> sau
+                <a href="https://wa.me/40123456789" target="_blank">WhatsApp</a>
+            </address>
+            <small
+                >&copy; 2024
+                <span>PC PartsPicker Toate drepturile rezervate.</span></small
+            ><br />
+            Data creării paginii:
+            <time datetime="2024-03-01">1 Martie 2024</time>
+        </footer>
     </body>
 </html>
