@@ -1,0 +1,63 @@
+#tab-orar caption {
+    caption-side: bottom;
+    text-align: center;
+    padding: 5px;
+    font-style: italic;
+}
+
+#tab-orar thead th {
+    border: 0px;
+    border-bottom: 2px solid darkgray;
+    color: white;
+}
+
+#tab-orar tfoot {
+    color: white;
+}
+
+#tab-orar,
+#tab-orar th,
+#tab-orar td {
+    text-align: center;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+#tab-orar > tbody > tr:nth-child(6) > td:nth-child(1),
+#tab-orar > tbody > tr:nth-child(1) > td:nth-child(1) {
+    background-color: var(--dark-color);
+    color: white;
+}
+
+#tab-orar tr {
+    border: 1px solid darkgray;
+    background-color: var(--dark-color);
+}
+
+#tab-orar tbody tr:nth-child(odd) {
+    color: var(--accent-color);
+}
+
+#tab-orar tbody tr:nth-child(even) {
+    color: var(--secondary-color);
+}
+
+table#tab-orar tbody tr:hover {
+    background-color: white;
+    font-size: 120%;
+    transition:
+        background-color 0.75s,
+        font-size 0.75s;
+}
+
+@media screen and (max-width: 600px) {
+    .table-container {
+        overflow-x: auto;
+    }
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+}
