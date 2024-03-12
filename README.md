@@ -42,7 +42,7 @@ Magazinul online va fi structurat în următoarele categorii principale:
 <details>
   <summary><b>Site-uri asemanatoare</b></summary>
 
-#### ![PC Garage](https://www.pcgarage.ro)
+#### [PC Garage](https://www.pcgarage.ro)
 
 Pro-uri:
 
@@ -54,7 +54,7 @@ Pro-uri:
 3. Posibile îmbunătățiri la nivelul paginii de promovare a produselor
 4. Variație limitată a produselor promovate
 
-#### ![EvoMag](https://www.evomag.ro)
+#### [EvoMag](https://www.evomag.ro)
 
 Pro-uri:
 
@@ -66,7 +66,7 @@ Pro-uri:
 3. Unele pagini pot părea aglomerate
 4. Posibile întârzieri în încărcare
 
-#### ![Shop4PC](https://www.shop4pc.ro/)
+#### [Shop4PC](https://www.shop4pc.ro/)
 
 Pro-uri:
 
@@ -78,7 +78,7 @@ Pro-uri:
 3. Interfața utilizatorului poate fi îmbunătățită
 4. Neclarități privind produsele, unele ar putea beneficia de descrieri mai detaliate sau recenzii
 
-#### ![Vexio](https://www.vexio.ro)
+#### [Vexio](https://www.vexio.ro)
 
 Pro-uri:
 
@@ -96,6 +96,6 @@ Pro-uri:
 
 ### Schema cromatică
 
-![Schema cromatica](./resurse/imagini/schema_cromatica.jpeg)
+![Schema cromatica](./resurse/imagini/schema-cromatica.jpeg)
 
 Am ales această schemă cromatică deoarece culorile sunt vii și oferă un aspect plăcut site-ului.
