@@ -1,0 +1,168 @@
+$grid-gap-large: var(--grid-gap-large);
+$grid-gap-medium: var(--grid-gap-medium);
+$grid-gap-small: var(--grid-gap-small);
+$spacing-medium: var(--spacing-medium);
+$spacing-small: var(--spacing-small);
+$box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+
+#grid-pagina {
+    display: grid;
+    gap: $grid-gap-large;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas:
+        "welcome welcome welcome welcome"
+        "anunturi anunturi anunturi anunturi"
+        "fig1 orar orar fig2"
+        "parteneri oferte frame-video frame-video";
+
+    > * {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: $box-shadow;
+        padding: 1em;
+        border-radius: 5px;
+    }
+
+    > figure {
+        margin: 0;
+    }
+}
+
+#mobile-nav {
+    display: none;
+}
+
+#desktop-nav {
+    display: block;
+}
+
+header, footer {
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    border-radius: 15px 15px 0px 0px;
+    box-shadow: 0px -2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+#footer-div {
+    display: flex;
+    flex-direction: row;
+}
+
+// #welcome, #promotii, #anunturi, #orar, #oferte, #fig1, #fig2, #fig3, #produse, #parteneri, #intrebari, #frame-video {
+//     grid-area: &;
+// }
+
+#welcome {
+    grid-area: welcome;
+}
+#promotii {
+    grid-area: promotii;
+}
+#anunturi {
+    grid-area: anunturi;
+}
+#orar {
+    grid-area: orar;
+}
+#oferte {
+    grid-area: oferte;
+}
+#fig1 {
+    grid-area: fig1;
+}
+#fig2 {
+    grid-area: fig2;
+}
+#fig3 {
+    grid-area: fig3;
+}
+#produse {
+    grid-area: produse;
+}
+#parteneri {
+    grid-area: parteneri;
+}
+#intrebari {
+    grid-area: intrebari;
+}
+#frame-video {
+    grid-area: frame-video;
+}
+
+.intro-oferte {
+    font-size: 1.5rem;
+}
+
+.farfurie {
+    width: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 15px;
+    }
+
+    main {
+        padding-left: $spacing-medium;
+        padding-right: $spacing-medium;
+        padding-bottom: $spacing-medium;
+        padding-top: $spacing-medium;
+    }
+
+    #mobile-nav {
+        display: block;
+    }
+
+    #desktop-nav {
+        display: none;
+    }
+
+    #grid-pagina {
+        gap: $grid-gap-medium;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 12px;
+    }
+
+    header h1 {
+        display: none !important;
+    }
+
+    main {
+        padding-left: $spacing-small;
+        padding-right: $spacing-small;
+        padding-bottom: $spacing-small;
+        padding-top: $spacing-small;
+    }
+
+    #footer-div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #mobile-nav {
+        display: block !important;
+    }
+
+    #desktop-nav {
+        display: none !important;
+    }
+
+    #grid-pagina {
+        > section {
+            margin: $grid-gap-small;
+        }
+
+        display: block;
+    }
+}

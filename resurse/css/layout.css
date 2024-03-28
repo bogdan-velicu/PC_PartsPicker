@@ -1,158 +1,152 @@
 #grid-pagina {
-    display: grid;
-    gap: var(--grid-gap-large);
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-areas:
-        "welcome welcome welcome welcome"
-        "anunturi anunturi anunturi anunturi"
-        "fig1 orar orar fig2"
-        "parteneri oferte frame-video frame-video";
+  display: grid;
+  gap: var(--grid-gap-large);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-areas: "welcome welcome welcome welcome" "anunturi anunturi anunturi anunturi" "fig1 orar orar fig2" "parteneri oferte frame-video frame-video";
+}
+#grid-pagina > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  border-radius: 5px;
+}
+#grid-pagina > figure {
+  margin: 0;
 }
 
-header {
-    border-radius: 0px 0px 15px 15px;
-    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+#mobile-nav {
+  display: none;
+}
+
+#desktop-nav {
+  display: block;
+}
+
+header, footer {
+  border-radius: 0px 0px 15px 15px;
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 footer {
-    border-radius: 15px 15px 0px 0px;
-    box-shadow: 0px -2px 5px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 15px 15px 0px 0px;
+  box-shadow: 0px -2px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 #footer-div {
-    display: flex;
-    flex-direction: row;
-}
-
-#grid-pagina > * {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-    padding: 1em;
-    border-radius: 5px;
-}
-
-#grid-pagina > figure {
-    margin: 0;
+  display: flex;
+  flex-direction: row;
 }
 
 #welcome {
-    grid-area: welcome;
+  grid-area: welcome;
 }
 
 #promotii {
-    grid-area: promotii;
+  grid-area: promotii;
 }
 
 #anunturi {
-    grid-area: anunturi;
+  grid-area: anunturi;
 }
 
 #orar {
-    grid-area: orar;
+  grid-area: orar;
 }
 
 #oferte {
-    grid-area: oferte;
+  grid-area: oferte;
 }
 
 #fig1 {
-    grid-area: fig1;
+  grid-area: fig1;
 }
 
 #fig2 {
-    grid-area: fig2;
+  grid-area: fig2;
 }
 
 #fig3 {
-    grid-area: fig3;
+  grid-area: fig3;
 }
 
 #produse {
-    grid-area: produse;
+  grid-area: produse;
 }
 
 #parteneri {
-    grid-area: parteneri;
+  grid-area: parteneri;
 }
 
 #intrebari {
-    grid-area: intrebari;
+  grid-area: intrebari;
 }
 
 #frame-video {
-    grid-area: frame-video;
+  grid-area: frame-video;
 }
 
 .intro-oferte {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .farfurie {
-    width: 50%;
+  width: 50%;
 }
 
 @media screen and (max-width: 1200px) {
-    html {
-        font-size: 15px;
-    }
-
-    main {
-        padding-left: var(--spacing-medium);
-        padding-right: var(--spacing-medium);
-        padding-bottom: var(--spacing-medium);
-        padding-top: var(--spacing-medium);
-    }
-
-    #grid-pagina {
-        gap: var(--grid-gap-medium);
-        /* grid-template-columns: repeat(2, 1fr); */
-        /* grid-template-areas: "welcome  welcome"
-    "orar fig3"
-    "fig1 fig2"
-    "oferte oferte"
-    "intrebari intrebari"
-    "anunturi anunturi"
-    "parteneri parteneri"
-    "frame-video frame-video"; */
-    }
+  html {
+    font-size: 15px;
+  }
+  main {
+    padding-left: var(--spacing-medium);
+    padding-right: var(--spacing-medium);
+    padding-bottom: var(--spacing-medium);
+    padding-top: var(--spacing-medium);
+  }
+  #mobile-nav {
+    display: block;
+  }
+  #desktop-nav {
+    display: none;
+  }
+  #grid-pagina {
+    gap: var(--grid-gap-medium);
+  }
 }
-
 @media screen and (max-width: 800px) {
-    html {
-        font-size: 12px;
-    }
-
-    header h1 {
-        display: none !important;
-    }
-
-    main {
-        padding-left: var(--spacing-small);
-        padding-right: var(--spacing-small);
-        padding-bottom: var(--spacing-small);
-        padding-top: var(--spacing-small);
-    }
-
-    #footer-div {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    #grid-pagina > section {
-        margin: var(--grid-gap-small);
-    }
-
-    #frame-tabs {
-        max-height: 300px;
-    }
-
-    #grid-pagina {
-        /* gap: var(--grid-gap-small); */
-        display: block;
-    }
+  html {
+    font-size: 12px;
+  }
+  header h1 {
+    display: none !important;
+  }
+  main {
+    padding-left: var(--spacing-small);
+    padding-right: var(--spacing-small);
+    padding-bottom: var(--spacing-small);
+    padding-top: var(--spacing-small);
+  }
+  #footer-div {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #mobile-nav {
+    display: block !important;
+  }
+  #desktop-nav {
+    display: none !important;
+  }
+  #grid-pagina {
+    display: block;
+  }
+  #grid-pagina > section {
+    margin: var(--grid-gap-small);
+  }
 }
+
+/*# sourceMappingURL=layout.css.map */

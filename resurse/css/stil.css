@@ -49,8 +49,13 @@ main a {
     color: black;
 }
 
+.fg-img img {
+    max-width: 200px;
+    min-height: 150px;
+}
+
 img {
-    max-width: 20vw;
+    max-width: 200px;
 }
 
 footer {
