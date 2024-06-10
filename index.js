@@ -26,7 +26,7 @@ app.get("/*",function(req,res){
     console.log("Pagina",rezHtml);
     console.log("Eroare",rezHtml);
     res.send(rezHtml);
-    } 
+    }
 })
 
 app.get("/cerere", function(req, res){
@@ -51,3 +51,4 @@ app.get("/suma/:a/:b", function(req, res){
 
 app.listen(8080);
 console.log("Serverul a pornit");
+console.log("http://localhost:8080/");
