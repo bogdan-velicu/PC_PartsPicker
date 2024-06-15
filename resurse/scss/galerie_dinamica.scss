@@ -1,0 +1,90 @@
+.dynamic-gallery {
+    display: flex;
+    border: 10px solid transparent;
+    border-image: url("../imagini/galerie/image8.jpg") 30 round;
+    overflow: hidden;
+    width: 500px;
+    height: 500px;
+    position: relative;
+
+    .dynamic-gallery-inner {
+        display: flex;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .dynamic-gallery-item {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        animation:
+            expandClip 3s linear infinite,
+            hideImage 3s linear infinite;
+
+        & figcaption {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 5px 0;
+            transition:
+                background 1.2s,
+                color 1.2s;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &:hover .dynamic-gallery-item {
+        animation-play-state: paused;
+    }
+}
+
+// Animation for fading in and out images
+@keyframes hideImage {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+// Animation for expanding and clipping images
+@keyframes expandClip {
+    0% {
+        clip-path: inset(0% 50% 0% 50%);
+        filter: brightness(130%);
+    }
+    100% {
+        clip-path: inset(0% 0% 0% 0%);
+        filter: brightness(100%);
+    }
+}
+
+// Media query to hide gallery on medium and small screens
+@media (max-width: 1000px) {
+    .dynamic-gallery {
+        display: none;
+    }
+}

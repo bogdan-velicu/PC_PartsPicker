@@ -1,0 +1,33 @@
+video {
+    width: 100%;
+    max-width: 800px;
+    min-width: 300px;
+    margin: 0 auto;
+    display: block;
+
+    track {
+        ::cue {
+            background: rgba(255, 255, 255, 0.3);
+            color: var(--dark-color);
+        }
+
+        ::cue(b:lang(ro)) {
+            background: rgba(255, 255, 255, 0.3);
+            color: var(--dark-color);
+        }
+
+        ::cue(b:lang(en)) {
+            background: rgba(255, 255, 255, 0.3);
+            color: var(--dark-color);
+        }
+
+        ::cue-time(0s, 1s) {
+            background: rgba(255, 255, 255, 0.3);
+            color: var(--dark-color);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

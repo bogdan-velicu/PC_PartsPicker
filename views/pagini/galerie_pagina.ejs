@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <%- include('../fragmente/head.ejs') %>
+
+        <title>PC PartsPicker - Galerie</title>
+
+        <!-- Different between pages -->
+        <meta
+            name="keywords"
+            content="Galerie, Poze, Imagini, PC PartsPicker, magazin, PC, laptop, computer, componente, easybox, Bucuresti, Sector 4"
+        />
+        <meta
+            name="description"
+            content="Galerie, Poze, Imagini pentru PC PartsPicker - Magazin fizic si online pentru vanzare componente sau sisteme de tip PC / laptop + livrare prin intermediul easybox sau ridicare personala din Bucuresti, Sector 4."
+        />
+
+        <link rel="stylesheet" href="/resurse/css/galerie.css" />
+        <link rel="stylesheet" href="/resurse/css/stil.css" />
+        <link rel="stylesheet" href="/resurse/css/navbar.css" />
+    </head>
+    <body>
+        <%- include('../fragmente/header') %>
+        <main><%- include('../fragmente/galerie', { images }) %></main>
+    </body>
+</html>

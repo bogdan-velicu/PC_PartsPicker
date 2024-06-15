@@ -1,0 +1,18 @@
+<div class="gallery-container">
+    <% images.forEach((image, index) => { %>
+    <figure class="gallery-item">
+        <picture>
+            <source
+                media="(max-width: 600px)"
+                srcset="<%= image.url.replace('.png', '-small.png') %>"
+            />
+            <img
+                src="<%= image.url %>"
+                alt="<%= image.alternativ || image.nume_imag %>"
+                title="<%= image.descriere_imag %>"
+            />
+        </picture>
+        <figcaption><%= image.index %>. <%= image.nume_imag %></figcaption>
+    </figure>
+    <% }) %>
+</div>

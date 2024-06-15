@@ -25,7 +25,8 @@
   display: block;
 }
 
-header, footer {
+header,
+footer {
   border-radius: 0px 0px 15px 15px;
   box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
@@ -94,6 +95,19 @@ footer {
 
 .farfurie {
   width: 50%;
+}
+
+#galerie,
+#galerie-dinamica {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  margin-top: var(--spacing-medium);
+  padding: 1em;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 1200px) {

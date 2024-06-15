@@ -1,0 +1,60 @@
+@mixin external-link-indicator {
+    &::before {
+        content: "⮳";
+        font-size: 150%;
+        margin-right: 0.2em;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+    &:visited {
+        color: var(--accent-color);
+    }
+
+    &[href^="http"] {
+        @include external-link-indicator;
+
+        &:hover::before {
+            color: var(--turquoise-color);
+        }
+    }
+
+    &.link-stilizat {
+        position: relative;
+        z-index: 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(
+                circle,
+                var(--turquoise-color) 0%,
+                var(--turquoise-color) 40%,
+                transparent 80%,
+                transparent 100%
+            );
+            background-position: center;
+            background-size: 0;
+            transition: background-size 0.3s ease;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+
+        &:hover::after {
+            width: 100%;
+            height: 100%;
+            background-size: 100%;
+        }
+
+        &:active {
+            border: 2px solid var(--turquoise-color);
+        }
+    }
+}

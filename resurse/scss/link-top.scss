@@ -25,20 +25,20 @@
         opacity 0.5s,
         filter 0.5s,
         color 0.5s;
-}
 
-#link-top > p {
-    margin: 0;
-    transition: transform 0.5s;
-}
+    &:hover {
+        color: black;
+        filter: blur(0);
+        opacity: 1;
+        transform: rotate(90deg);
+    }
 
-#link-top:hover > p {
-    transform: rotate(-90deg);
-}
+    p {
+        margin: 0;
+        transition: transform 0.5s;
+    }
 
-#link-top:hover {
-    opacity: 1;
-    color: black;
-    filter: blur(0);
-    transform: rotate(90deg);
+    &:hover > p {
+        transform: rotate(-90deg);
+    }
 }

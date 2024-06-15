@@ -1,0 +1,39 @@
+#link-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2em;
+  position: fixed;
+  bottom: 0.3em;
+  opacity: 0.5;
+  right: 0.3em;
+  width: 3rem;
+  box-sizing: border-box;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  border: 5px solid grey;
+  border-left-color: darkgray;
+  border-right-color: darkgray;
+  border-radius: 50%;
+  background: rgb(220, 220, 220);
+  filter: blur(1px);
+  color: darkgray;
+  transition: transform 0.5s, opacity 0.5s, filter 0.5s, color 0.5s;
+}
+#link-top:hover {
+  color: black;
+  filter: blur(0);
+  opacity: 1;
+  transform: rotate(90deg);
+}
+#link-top p {
+  margin: 0;
+  transition: transform 0.5s;
+}
+#link-top:hover > p {
+  transform: rotate(-90deg);
+}
+
+/*# sourceMappingURL=link-top.css.map */

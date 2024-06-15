@@ -19,27 +19,24 @@
     <main>
         <div id="grid-pagina">
             <section id="welcome">
-                <h2>Bine ati venit!</h2>
-                <!-- <figure>
-                    <img srcset="
-                                ./resurse/imagini/gpu_small.jpg   300w,
-                                ./resurse/imagini/gpu_medium.jpg  600w,
-                            " sizes="(max-width: 600px) 300px,
-                               (max-width: 900px) 600px,
-                               600px" src="./resurse/imagini/gpu_medium.jpg" alt="imagine gpu" />
-                    <figcaption>GPU</figcaption>
-                </figure> -->
-                <p>
-                    Bine ati venit pe pagina noastra - <b>PC PartsPicker</b>
-                </p>
+                <div class="reflection-container">
+                    <h3 style="margin-bottom: 0;">Bine ati venit pe pagina noastra - <b>PC PartsPicker</b></h3>
+                    <h3 class="reflection">Bine ati venit pe pagina noastra - PC PartsPicker</h3>
+                </div>
                 <br />
-                <p>
-                    Speram sa putem sa va ajutam sa va alegeti componentele
-                    dorite pentru <b>PC-ul</b> dumneavoastra
-                </p>
+                <video controls poster="resurse/imagini/pc_build.webp" preload="metadata" width="100%">
+                  <source src="resurse/videos/intro-ai.mp4" type="video/mp4">
+                  <source src="resurse/videos/intro-ai.webm" type="video/webm">
+
+                  <track src="resurse/vtt/ro.vtt" kind="subtitles" srclang="ro" label="Română" default>
+                  <track src="resurse/vtt/en.vtt" kind="subtitles" srclang="en" label="English">
+
+                  Your browser does not support the video tag.
+                </video>
             </section>
             <section id="oferte">
                 <h2>Oferte</h2>
+                <hr />
                 <section>
                     <h3>Oferte Procesoare</h3>
                     <p>
@@ -155,12 +152,16 @@
                 </div>
             </section>
             <section id="fig1">
+                <h2>CPU Promoție</h2>
+                <hr />
                 <figure class="fg-img">
                     <img src="resurse/imagini/ryzen_cpu.png" alt="cpu" />
                     <figcaption>CPU AMD Ryzen 8800G</figcaption>
                 </figure>
             </section>
             <section id="fig2">
+                <h2>RAM Promoție</h2>
+                <hr />
                 <figure class="fg-img">
                     <img src="resurse/imagini/ram.png" alt="ram" />
                     <figcaption>RAM HyperX Fury</figcaption>
@@ -173,41 +174,58 @@
             </section>
             <section id="anunturi">
                 <h2>Anunțuri</h2>
-                <p>
-                    <time datetime="2022-01-05">5 ianuarie 2022</time>
-                    <strong>No more Covid!!!!</strong>
-                </p>
-                <p>
-                    <time datetime="2022-01-21">21 ianuarie 2022</time>
-                    <strong>Black Friday 2022</strong>
-                </p>
-                <p>
-                    <time datetime="2022-02-14">14 februarie 2022</time>
-                    <strong>Valentine's Day</strong>
-                </p>
-                <p>
-                    <time datetime="2022-03-08">8 martie 2022</time>
-                    <strong>Ziua Femeii</strong>
-                </p>
-                <p>
-                    <time datetime="2022-04-01">1 aprilie 2022</time>
-                    <strong>April's Fools</strong>
-                </p>
+                <hr />
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                    <div>
+                        <p>
+                            <time datetime="2022-01-05">5 ianuarie 2022</time>
+                            <strong>No more Covid!!!!</strong>
+                        </p>
+                        <p>
+                            <time datetime="2022-01-21">21 ianuarie 2022</time>
+                            <strong>Black Friday 2022</strong>
+                        </p>
+                        <p>
+                            <time datetime="2022-02-14">14 februarie 2022</time>
+                            <strong>Valentine's Day</strong>
+                        </p>
+                        <p>
+                            <time datetime="2022-03-08">8 martie 2022</time>
+                            <strong>Ziua Femeii</strong>
+                        </p>
+                        <p>
+                            <time datetime="2022-04-01">1 aprilie 2022</time>
+                            <strong>April's Fools</strong>
+                        </p>
+                    </div>
+                    <div class="duotone-image"></div>
+                </div>
             </section>
             <section id="parteneri">
                 <h2>Parteneri</h2>
+                <hr />
                 <p>
                     Suntem mandri sa va anuntam ca am incheiat un
                     parteneriat cu <b>EasyBox</b> pentru livrarea
                     produselor noastre
-                    <a href="https://sameday.ro/easybox/" target="_blank">mai multe informatii</a>
+                    <a class="link-stilizat" href="https://sameday.ro/easybox/" target="_blank">mai multe informatii</a>
                 </p>
             </section>
             </section>
         </div>
+        <section id="galerie">
+            <h2>Galerie</h2>
+            <hr />
+            <%- include("../fragmente/galerie.ejs") %>
+        </section>
+        <section id="galerie-dinamica">
+            <h2>Galerie Dinamica</h2>
+            <hr />
+            <%- include("../fragmente/galerie_dinamica.ejs") %>
+        </section>
     </main>
     <br />
-    
+
     <%- include("../fragmente/footer.ejs") %>
 </body>
 

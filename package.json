@@ -1,6 +1,16 @@
 {
+  "name": "PC Parts Picker",
+  "version": "1.0.0",
+  "description": "A simple web store for PC parts",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build-css": "node-sass resurse/scss/galerie_dinamica.scss resurse/scss/galerie_dinamica.css"
+  },
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "node-sass": "^9.0.0",
+    "sharp": "^0.33.4"
   }
 }
