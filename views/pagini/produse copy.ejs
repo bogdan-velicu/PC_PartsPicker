@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ro">
+    <head>
+        <%- include('../fragmente/head.ejs') %>
+
+        <title>PC PartsPicker - Produse</title>
+
+        <!-- Different between pages -->
+        <meta
+            name="keywords"
+            content="produse, procesoare, placi video, placi de baza, memorii, hard-disk, componente, easybox, Bucuresti, Sector 4"
+        />
+        <meta
+            name="description"
+            content="PC PartsPicker - Magazin fizic si online pentru vanzare componente sau sisteme de tip PC / laptop + livrare prin intermediul easybox sau ridicare personala din Bucuresti, Sector 4."
+        />
+    </head>
+
+    <body>
+        <%- include('../fragmente/header.ejs') %>
+
+        <main>
+            <h1 id="product-list-title">Produse - Toate Produsele</h1>
+
+            <section class="filters">
+                <div class="filter-group">
+                    <label for="search">Căutare:</label>
+                    <input
+                        type="text"
+                        id="search"
+                        placeholder="Căutați un produs..."
+                    />
+                </div>
+
+                <div class="filter-group">
+                    <label for="price-range">Preț:</label>
+                    <input
+                        type="range"
+                        id="price-range"
+                        min="0"
+                        max="10000"
+                        step="100"
+                    />
+                    <span class="range-value">10000</span> RON
+                </div>
+
+                <div class="filter-group">
+                    <label for="categories">Categorie:</label>
+                    <select id="categories">
+                        <option value="toate">Oricare</option>
+                        <% categories.forEach(category => { %>
+                        <option value="<%= category %>">
+                            <%= category.charAt(0).toUpperCase() +
+                            category.slice(1) %>
+                        </option>
+                        <% }); %>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="subcategory">Subcategorie:</label>
+                    <select id="subcategory" multiple>
+                        <option value="toate">Oricare</option>
+                        <% subcategories.forEach(subcategory => { %>
+                        <option value="<%= subcategory %>">
+                            <%= subcategory %>
+                        </option>
+                        <% }); %>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="features">Caracteristici:</label>
+                    <% uniqueCharacteristics.forEach(feature => { %>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="feature-<%= feature %>"
+                            value="<%= feature %>"
+                        />
+                        <label for="feature-<%= feature %>"
+                            ><%= feature %></label
+                        >
+                    </div>
+                    <% }); %>
+                </div>
+            </section>
+
+            <section id="produse-lista">
+                <% produse.forEach(produs => { %>
+                <article
+                    id="articol_<%= produs.id %>"
+                    class="<%= produs.categorie_mare.replace(/\s+/g, '').toLowerCase() %>"
+                >
+                    <h2>
+                        <a href="/produse/<%= produs.id %>"
+                            ><%= produs.nume %></a
+                        >
+                    </h2>
+                    <p style="display: none">
+                        Categorie: <%= produs.categorie_mare %>
+                    </p>
+                    <p style="display: none">
+                        Subcategorie: <%= produs.subcategorie %>
+                    </p>
+                    <div class="descriere-imagine">
+                        <p><%= produs.descriere_imag %></p>
+                        <img
+                            src="/resurse/imagini/produse/<%= produs.imagine %>"
+                            alt="<%= produs.nume %>"
+                            class="produs-imagine"
+                        />
+                    </div>
+                    <ul>
+                        <li>Preț: <%= produs.pret %> RON</li>
+                        <li>
+                            Specificație numerică: <%=
+                            produs.specificatie_numerica %>
+                        </li>
+                        <li>
+                            Caracteristică unică: <%=
+                            produs.caracteristica_unica %>
+                        </li>
+                        <li>
+                            Caracteristici multiple: <%=
+                            produs.caracteristica_multipla.split(',').join(', ')
+                            %>
+                        </li>
+                        <li>
+                            Data:
+                            <time datetime="<%= produs.data_inregistrare %>"
+                                ><%= new
+                                Date(produs.data_inregistrare).toLocaleDateString('ro-RO',
+                                { weekday: 'long', year: 'numeric', month:
+                                'long', day: 'numeric' }) %></time
+                            >
+                        </li>
+                        <li>
+                            Disponibil: <%= produs.caracteristica_booleana ?
+                            'Da' : 'Nu' %>
+                        </li>
+                    </ul>
+                </article>
+                <% }); %>
+            </section>
+
+            <script>
+                function filtreazaProduse() {
+                    const filtruNume = document
+                        .getElementById("search")
+                        .value.toLowerCase();
+
+                    const filtruCategorie =
+                        document.getElementById("categories").value;
+
+                    const valoriSubcategorie = Array.from(
+                        document.getElementById("subcategory").selectedOptions,
+                    ).map((option) => option.value);
+                    console.log(valoriSubcategorie);
+
+                    // const filtruSubcategorie = document
+                    //     .getElementById("subcategory")
+                    //     .selectedOptions;
+                    // filtruSubcategorie.forEach((option) => {
+                    //     option.value;
+                    // });
+
+                    const filtruCaracteristici = Array.from(
+                        document.querySelectorAll("input[type=checkbox]"),
+                    )
+                        .filter((checkbox) => checkbox.checked)
+                        .map((checkbox) => checkbox.value);
+
+                    const filtruPret =
+                        document.getElementById("price-range").value;
+
+                    const articole = document.querySelectorAll(
+                        "#produse-lista article",
+                    );
+
+                    articole.forEach((articol) => {
+                        const nume = articol
+                            .querySelector("h2")
+                            .textContent.toLowerCase();
+
+                        const categorie = articol.classList[0];
+
+                        const subcategorie = articol
+                            .querySelector("p:nth-of-type(2)")
+                            .textContent.split(": ")[1];
+
+                        const caracteristici = Array.from(
+                            articol.querySelectorAll("li:nth-of-type(4)"),
+                        ).map((li) => li.textContent);
+
+                        const pret = parseInt(
+                            articol
+                                .querySelector("li:nth-of-type(1)")
+                                .textContent.split(" ")[1],
+                        );
+
+                        if (
+                            nume.includes(filtruNume) &&
+                            (filtruCategorie === "toate" ||
+                                categorie === filtruCategorie) &&
+                            (valoriSubcategorie.includes("toate") ||
+                                valoriSubcategorie.includes(subcategorie)) &&
+                            // (filtruCaracteristici.length === 0 ||
+                            //     filtruCaracteristici.every((caracteristica) =>
+                            //         caracteristici.includes(caracteristica),
+                            //     )) &&
+                            pret <= filtruPret
+                        ) {
+                            articol.style.display = "";
+                        } else {
+                            articol.style.display = "none";
+                        }
+                    });
+                }
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    document.getElementById("categories").value =
+                        "<%= selectedCategory %>";
+                    const rangeInput = document.getElementById("price-range");
+                    const rangeValue = document.querySelector(".range-value");
+
+                    rangeValue.textContent = rangeInput.value;
+
+                    rangeInput.addEventListener("input", function () {
+                        rangeValue.textContent = rangeInput.value;
+                        filtreazaProduse();
+                    });
+
+                    document
+                        .getElementById("search")
+                        .addEventListener("input", filtreazaProduse);
+                    document
+                        .getElementById("categories")
+                        .addEventListener("change", filtreazaProduse);
+                    document
+                        .getElementById("subcategory")
+                        .addEventListener("change", filtreazaProduse);
+                    document
+                        .querySelectorAll("input[type=checkbox]")
+                        .forEach((checkbox) => {
+                            checkbox.addEventListener(
+                                "change",
+                                filtreazaProduse,
+                            );
+                        });
+                });
+            </script>
+        </main>
+
+        <%- include("../fragmente/footer.ejs") %>
+    </body>
+</html>

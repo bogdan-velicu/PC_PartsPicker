@@ -4,6 +4,13 @@
 <head>
     <%- include('../fragmente/head.ejs') %>
 
+    <div id="banner">Velicu Bogdan</div>
+        <div id="watermark">
+            <p>Velicu</p>
+            <p>Bogdan</p>
+        </div>
+    </div>
+
     <title>PC PartsPicker</title>
 
     <!-- Different between pages -->
@@ -19,24 +26,28 @@
     <main>
         <div id="grid-pagina">
             <section id="welcome">
-                <div class="reflection-container">
-                    <h3 style="margin-bottom: 0;">Bine ati venit pe pagina noastra - <b>PC PartsPicker</b></h3>
-                    <h3 class="reflection">Bine ati venit pe pagina noastra - PC PartsPicker</h3>
+                <!-- <h3 style="margin-bottom: 0;">Bine ati venit pe pagina noastra - <b>PC PartsPicker</b></h3>
+                <h3 class="reflection">Bine ati venit pe pagina noastra - PC PartsPicker</h3> -->
+                <div id="titlu">
+                    Bine ati venit pe pagina noastra - PC PartsPicker
+    				<div id="titlu-reflectat">
+       					Bine ati venit pe pagina noastra - PC PartsPicker
+    				</div>
                 </div>
                 <br />
                 <video controls poster="resurse/imagini/pc_build.webp" preload="metadata" width="100%">
-                  <source src="resurse/videos/intro-ai.mp4" type="video/mp4">
-                  <source src="resurse/videos/intro-ai.webm" type="video/webm">
+                  <source src="/resurse/videos/intro-ai.mp4" type="video/mp4">
+                  <source src="/resurse/videos/intro-ai.webm" type="video/webm">
 
-                  <track src="resurse/vtt/ro.vtt" kind="subtitles" srclang="ro" label="Română" default>
-                  <track src="resurse/vtt/en.vtt" kind="subtitles" srclang="en" label="English">
+                  <track src="/resurse/vtt/ro.vtt" kind="subtitles" srclang="ro" label="Română" default>
+                  <track src="/resurse/vtt/en.vtt" kind="subtitles" srclang="en" label="English">
 
                   Your browser does not support the video tag.
                 </video>
             </section>
             <section id="oferte">
                 <h2>Oferte</h2>
-                <hr />
+                <hr class="styled-hr" />
                 <section>
                     <h3>Oferte Procesoare</h3>
                     <p>
@@ -128,8 +139,8 @@
                 <caption>Orele de lucru</caption>
             </section>
             <section id="frame-video" style="min-height: 200px;">
-                <div class="row">
-                    <div id="frame-tabs" class="column">
+                <div class="frame-row">
+                    <div id="frame-tabs" class="frame-column">
                         <a href="https://sketchfab.com/models/249fb5e8c1e94686a2c2b1cd6df72bc5/embed?ui_theme=dark&dnt=1&autostart=1&camera=0"
                             target="videoFrame">Procesor</a>
                         <a href="https://sketchfab.com/models/a15a7202bd234623bd2d2228b8fdb8ec/embed?autostart=1&camera=0&ui_theme=dark&dnt=1"
@@ -153,7 +164,7 @@
             </section>
             <section id="fig1">
                 <h2>CPU Promoție</h2>
-                <hr />
+                <hr class="styled-hr" />
                 <figure class="fg-img">
                     <img src="resurse/imagini/ryzen_cpu.png" alt="cpu" />
                     <figcaption>CPU AMD Ryzen 8800G</figcaption>
@@ -161,7 +172,7 @@
             </section>
             <section id="fig2">
                 <h2>RAM Promoție</h2>
-                <hr />
+                <hr class="styled-hr" />
                 <figure class="fg-img">
                     <img src="resurse/imagini/ram.png" alt="ram" />
                     <figcaption>RAM HyperX Fury</figcaption>
@@ -174,7 +185,7 @@
             </section>
             <section id="anunturi">
                 <h2>Anunțuri</h2>
-                <hr />
+                <hr class="styled-hr" />
                 <div style="display: flex; flex-direction: row; align-items: center;">
                     <div>
                         <p>
@@ -203,7 +214,7 @@
             </section>
             <section id="parteneri">
                 <h2>Parteneri</h2>
-                <hr />
+                <hr class="styled-hr" />
                 <p>
                     Suntem mandri sa va anuntam ca am incheiat un
                     parteneriat cu <b>EasyBox</b> pentru livrarea
@@ -215,12 +226,12 @@
         </div>
         <section id="galerie">
             <h2>Galerie</h2>
-            <hr />
+            <hr class="styled-hr" />
             <%- include("../fragmente/galerie.ejs") %>
         </section>
         <section id="galerie-dinamica">
             <h2>Galerie Dinamica</h2>
-            <hr />
+            <hr class="styled-hr" />
             <%- include("../fragmente/galerie_dinamica.ejs") %>
         </section>
     </main>

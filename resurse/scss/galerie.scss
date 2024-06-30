@@ -1,9 +1,10 @@
 .gallery-container {
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(100px, auto);
     gap: 10px;
     padding: 10px;
+    counter-reset: gallery-counter;
 
     img {
         max-height: 400px;
@@ -15,10 +16,11 @@
     position: relative;
     overflow: hidden;
     filter: brightness(50%);
-    max-width: 29vw;
+    max-height: 300px;
     transition:
         filter 1.2s,
         color 1.2s;
+    counter-increment: gallery-counter;
 
     &:hover {
         filter: brightness(100%);
@@ -43,15 +45,47 @@
     }
 }
 
-.gallery-item:nth-child(4n + 1) {
-    grid-column: 1 / span 2;
+.gallery-item:nth-child(14n + 1) {
+    grid-area: 1/2/2/3;
 }
-.gallery-item:nth-child(4n + 2),
-.gallery-item:nth-child(4n + 4) {
-    grid-column: 2 / span 2;
+.gallery-item:nth-child(14n + 2) {
+    grid-area: 1/3/2/4;
 }
-.gallery-item:nth-child(4n + 3) {
-    grid-column: 3 / span 2;
+.gallery-item:nth-child(14n + 3) {
+    grid-area: 2/1/3/2;
+}
+.gallery-item:nth-child(14n + 4) {
+    grid-area: 2/3/3/4;
+}
+.gallery-item:nth-child(14n + 5) {
+    grid-area: 3/1/4/2;
+}
+.gallery-item:nth-child(14n + 6) {
+    grid-area: 3/2/4/3;
+}
+.gallery-item:nth-child(14n + 7) {
+    grid-area: 4/1/6/2;
+}
+.gallery-item:nth-child(14n + 8) {
+    grid-area: 4/3/6/4;
+}
+.gallery-item:nth-child(14n + 9) {
+    grid-area: 1/1/2/2;
+}
+.gallery-item:nth-child(14n + 10) {
+    grid-area: 1/1/2/2;
+}
+.gallery-item:nth-child(14n + 11) {
+    grid-area: 1/1/2/2;
+}
+.gallery-item:nth-child(14n + 12) {
+    grid-area: 1/1/2/2;
+}
+.gallery-item:nth-child(14n + 13) {
+    grid-area: 1/1/2/2;
+}
+.gallery-item:nth-child(14n + 14) {
+    grid-area: 1/1/2/2;
 }
 
 @media (max-width: 1200px) {
@@ -62,10 +96,13 @@
     .gallery-item:nth-child(odd) {
         grid-column: 1;
         max-width: 100%;
+        grid-area: auto;
     }
 
     .gallery-item:nth-child(even) {
         grid-column: 2;
+        max-width: 100%;
+        grid-area: auto;
     }
 }
 
@@ -77,5 +114,6 @@
     .gallery-item:nth-child(n) {
         grid-column: 1;
         max-width: 100%;
+        grid-area: auto;
     }
 }

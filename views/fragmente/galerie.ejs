@@ -1,18 +1,25 @@
-<div class="gallery-container">
-    <% images.forEach((image, index) => { %>
+<section class="gallery-container">
+    <% var vLuni = ["ianuarie", "februarie", "martie", "aprilie", "mai",
+    "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie",
+    "decembrie"]; var d = new Date(); var lunaCurenta = vLuni[d.getMonth()]; var
+    counter = 1; for (let imag of locals.imagini) { if
+    (imag?.luni?.includes(lunaCurenta)) { %>
     <figure class="gallery-item">
         <picture>
             <source
-                media="(max-width: 600px)"
-                srcset="<%= image.url.replace('.png', '-small.png') %>"
+                srcset="<%= imag.cale_relativa_mediu %>"
+                media="(max-width:1200px)"
             />
             <img
-                src="<%= image.url %>"
-                alt="<%= image.alternativ || image.nume_imag %>"
-                title="<%= image.descriere_imag %>"
+                src="<%= imag.cale_relativa %>"
+                alt="<%= imag.alt ? imag.alt : imag.nume %>"
+                title="<%= imag.descriere_imag %>"
             />
         </picture>
-        <figcaption><%= image.index %>. <%= image.nume_imag %></figcaption>
+
+        <figcaption>
+            <%= ("0" + counter).slice(-2) %> <%= imag.descriere_imag %>
+        </figcaption>
     </figure>
-    <% }) %>
-</div>
+    <% counter++; } } %>
+</section>

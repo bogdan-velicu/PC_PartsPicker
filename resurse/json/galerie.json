@@ -1,0 +1,171 @@
+{
+  "cale_galerie": "resurse/imagini/galerie",
+  "imagini": [
+    {
+      "cale_relativa": "image1.jpg",
+      "nume_imag": "Motherboard + CPU",
+      "alternativ": "Motherboard + CPU closeup",
+      "descriere_imag": "Motherboard + CPU closeup",
+      "luni": [
+        "ianuarie",
+        "februarie",
+        "martie",
+        "aprilie",
+        "mai",
+        "iunie",
+        "iulie",
+        "august",
+        "septembrie",
+        "octombrie",
+        "noiembrie",
+        "decembrie"
+      ],
+      "intervale_ore": [
+        [2, 7],
+        [14, 16],
+        [22, 23]
+      ],
+      "atributie": "Christian Wiediger, Unsplash.com"
+    },
+    {
+      "cale_relativa": "image2.jpg",
+      "descriere_imag": "GPU NVIDIA",
+      "luni": [
+        "ianuarie",
+        "februarie",
+        "martie",
+        "aprilie",
+        "mai",
+        "iunie",
+        "iulie",
+        "august",
+        "septembrie",
+        "octombrie",
+        "noiembrie",
+        "decembrie"
+      ],
+      "intervale_ore": [[0, 23]],
+      "atributie": "Christian Wiediger, Unsplash.com"
+    },
+    {
+      "cale_relativa": "image3.jpg",
+      "descriere_imag": "Open Case closeup",
+      "luni": [
+        "ianuarie",
+        "februarie",
+        "martie",
+        "aprilie",
+        "mai",
+        "iunie",
+        "iulie",
+        "august",
+        "septembrie",
+        "octombrie",
+        "noiembrie",
+        "decembrie"
+      ],
+      "intervale_ore": [[0, 23]],
+      "atributie": "Daniel Lezuch, Unsplash.com"
+    },
+    {
+      "cale_relativa": "image4.jpg",
+      "descriere_imag": "CPU AMD Ryzen closeup",
+      "luni": [
+        "ianuarie",
+        "februarie",
+        "martie",
+        "aprilie",
+        "mai",
+        "iunie",
+        "iulie",
+        "august",
+        "septembrie",
+        "octombrie",
+        "noiembrie",
+        "decembrie"
+      ],
+      "intervale_ore": [[0, 23]],
+      "atributie": "Oliver Collet, Unsplash.com"
+    },
+    {
+      "cale_relativa": "image5.jpg",
+      "descriere_imag": "Hard Drive closeup",
+      "luni": [
+        "ianuarie",
+        "februarie",
+        "martie",
+        "aprilie",
+        "mai",
+        "iunie",
+        "iulie",
+        "august",
+        "septembrie",
+        "octombrie",
+        "noiembrie",
+        "decembrie"
+      ],
+      "intervale_ore": [[0, 23]],
+      "atributie": "Patrick Lindenberg, Unsplash.com"
+    },
+    {
+      "cale_relativa": "image6.jpg",
+      "descriere_imag": "PC Build closeup",
+      "luni": [
+        "ianuarie",
+        "februarie",
+        "martie",
+        "aprilie",
+        "mai",
+        "iunie",
+        "iulie",
+        "august",
+        "septembrie",
+        "octombrie",
+        "noiembrie",
+        "decembrie"
+      ],
+      "intervale_ore": [[0, 23]],
+      "atributie": "Rafael Pol, Unsplash.com"
+    },
+    {
+      "cale_relativa": "image7.jpg",
+      "descriere_imag": "PC Build RGB closeup",
+      "luni": [
+        "ianuarie",
+        "februarie",
+        "martie",
+        "aprilie",
+        "mai",
+        "iunie",
+        "iulie",
+        "august",
+        "septembrie",
+        "octombrie",
+        "noiembrie",
+        "decembrie"
+      ],
+      "intervale_ore": [[0, 23]],
+      "atributie": "Sadshah, Unsplash.com"
+    },
+    {
+      "cale_relativa": "image8.jpg",
+      "descriere_imag": "Mechanical Keyboard closeup",
+      "luni": [
+        "ianuarie",
+        "februarie",
+        "martie",
+        "aprilie",
+        "mai",
+        "iunie",
+        "iulie",
+        "august",
+        "septembrie",
+        "octombrie",
+        "noiembrie",
+        "decembrie"
+      ],
+      "intervale_ore": [[0, 23]],
+      "atributie": "Stefan Tan, Unsplash.com"
+    }
+  ]
+}

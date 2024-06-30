@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ro">
+    <head>
+        <%- include('../fragmente/head.ejs') %>
+
+        <title>PC PartsPicker - Produse</title>
+
+        <!-- Different between pages -->
+        <meta
+            name="keywords"
+            content="produse, procesoare, placi video, placi de baza, memorii, hard-disk, componente, easybox, Bucuresti, Sector 4"
+        />
+        <meta
+            name="description"
+            content="PC PartsPicker - Magazin fizic si online pentru vanzare componente sau sisteme de tip PC / laptop + livrare prin intermediul easybox sau ridicare personala din Bucuresti, Sector 4."
+        />
+    </head>
+
+    <body>
+        <%- include('../fragmente/header.ejs') %>
+
+        <main>
+            <h1 id="product-list-title">Produse</h1>
+
+            <section class="filters">
+                <div class="filter-group">
+                    <label for="search">Căutare:</label>
+                    <input
+                        type="text"
+                        id="inp-nume"
+                        placeholder="Căutați un produs..."
+                    />
+                </div>
+
+                <div class="filter-group">
+                    <label for="price-range">Preț:</label>
+                    <input
+                        type="range"
+                        id="inp-pret"
+                        min="0"
+                        max="10000"
+                        step="100"
+                        value="10000"
+                    />
+                    <span id="range-value">10000</span> RON
+                </div>
+
+                <div class="filter-group">
+                    <label for="categories">Categorie:</label>
+                    <select id="inp-categorie">
+                        <option id="sel-toate" selected value="toate">
+                            toate
+                        </option>
+                        <% for (let opt of locals.optiuni) { %>
+                        <option value="<%- opt.unnest %>">
+                            <%- opt.unnest %>
+                        </option>
+                        <% } %>
+                    </select>
+                </div>
+
+                <div class="filters-box">
+                    <button id="filtrare">Filtreaza</button>
+
+                    <button id="resetare">Reseteaza</button><br />
+                    <button id="sortCrescNume">
+                        Sorteaza crescator dupa pret si nume
+                    </button>
+                    <button id="sortDescrescNume">
+                        Sorteaza descrescator dupa pret si nume
+                    </button>
+                </div>
+            </section>
+
+            <p id="p-suma">
+                Apăsați Shift+C pentru suma preturilor produselor afișate.
+            </p>
+            <section id="produse-lista">
+                <% locals.produse.forEach(produs => { %>
+                <article id="articol_<%= produs.id %>" class="produs">
+                    <h2>
+                        <a class="val-nume" href="/produs/<%= produs.id %>"
+                            ><%= produs.nume %></a
+                        >
+                    </h2>
+                    <p class="val-categorie" style="display: none">
+                        <%= produs.categorie_mare %>
+                    </p>
+                    <p class="val-subcategorie" style="display: none">
+                        <%= produs.subcategorie %>
+                    </p>
+                    <div class="descriere-imagine">
+                        <p class="val-descriere">
+                            <%= produs.descriere_imag %>
+                        </p>
+                        <img
+                            src="/resurse/imagini/produse/<%= produs.imagine %>"
+                            alt="<%= produs.nume %>"
+                            class="produs-imagine"
+                        />
+                    </div>
+                    <ul>
+                        <li>
+                            Preț:
+                            <p class="val-pret"><%= produs.pret %></p>
+                            RON
+                        </li>
+                        <li>
+                            Specificație numerică: <%=
+                            produs.specificatie_numerica %>
+                        </li>
+                        <li>
+                            Caracteristică unică: <%=
+                            produs.caracteristica_unica %>
+                        </li>
+                        <li>
+                            Caracteristici multiple: <%=
+                            produs.caracteristica_multipla.split(',').join(', ')
+                            %>
+                        </li>
+                        <li>
+                            Data:
+                            <time datetime="<%= produs.data_inregistrare %>"
+                                ><%= new
+                                Date(produs.data_inregistrare).toLocaleDateString('ro-RO',
+                                { weekday: 'long', year: 'numeric', month:
+                                'long', day: 'numeric' }) %></time
+                            >
+                        </li>
+                        <li>
+                            Disponibil: <%= produs.caracteristica_booleana ?
+                            'Da' : 'Nu' %>
+                        </li>
+                    </ul>
+                </article>
+                <% }); %>
+            </section>
+        </main>
+
+        <script src="/resurse/js/produse.js"></script>
+
+        <%- include("../fragmente/footer") %>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ro">
+    <head>
+        <%- include('../fragmente/head.ejs') %>
+
+        <title>PC PartsPicker - Produse</title>
+
+        <!-- Different between pages -->
+        <meta
+            name="keywords"
+            content="produse, procesoare, placi video, placi de baza, memorii, hard-disk, componente, easybox, Bucuresti, Sector 4"
+        />
+        <meta
+            name="description"
+            content="PC PartsPicker - Magazin fizic si online pentru vanzare componente sau sisteme de tip PC / laptop + livrare prin intermediul easybox sau ridicare personala din Bucuresti, Sector 4."
+        />
+    </head>
+
+    <body>
+        <%- include('../fragmente/header.ejs') %>
+
+        <main class="product-page">
+            <div class="product-container">
+                <h1><%= locals.prod.nume %></h1>
+                <div class="product-details">
+                    <img
+                        src="/resurse/imagini/produse/<%= locals.prod.imagine %>"
+                        alt="<%= locals.prod.nume %>"
+                    />
+                    <div class="product-info">
+                        <p class="description">
+                            <%= locals.prod.descriere_imag %>
+                        </p>
+                        <p class="price">Preț: <%= locals.prod.pret %> RON</p>
+                        <p class="category">
+                            Categorie: <%= locals.prod.categorie_mare %>
+                        </p>
+                        <p class="subcategory">
+                            Subcategorie: <%= locals.prod.subcategorie %>
+                        </p>
+                        <p class="unique-feature">
+                            Caracteristica Unica: <%=
+                            locals.prod.caracteristica_unica %>
+                        </p>
+                        <p class="multiple-features">
+                            Caracteristici Multiple: <%=
+                            locals.prod.caracteristica_multipla %>
+                        </p>
+                        <p class="availability">
+                            Disponibil: <%= locals.prod.caracteristica_booleana
+                            ? 'Da' : 'Nu' %>
+                        </p>
+                    </div>
+                </div>
+                <a class="back-link" href="/produse"
+                    >Înapoi la lista de produse</a
+                >
+            </div>
+        </main>
+
+        <%- include("../fragmente/footer.ejs") %>
+    </body>
+</html>

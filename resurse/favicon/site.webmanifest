@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "PC Parts Picker",
+    "short_name": "PCPP",
     "icons": [
        {
           "src": "/android-chrome-192x192.png",

@@ -67,9 +67,10 @@
   }
 }
 @media (max-width: 1000px) {
+  #galerie-dinamica {
+    display: none;
+  }
   .dynamic-gallery {
     display: none;
   }
 }
-
-/*# sourceMappingURL=galerie_dinamica.css.map */

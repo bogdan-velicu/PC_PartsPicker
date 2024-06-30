@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ro">
+    <head>
+        <meta
+            name="keywords"
+            content="PC PartsPicker, magazin, PC, laptop, computer, componente, easybox, Bucuresti, Sector 4"
+        />
+        <meta
+            name="description"
+            content="PC PartsPicker - Magazin fizic si online pentru vanzare componente sau sisteme de tip PC / laptop + livrare prin intermediul easybox sau ridicare personala din Bucuresti, Sector 4."
+        />
+        <title>PC Parts Picker - eroare</title>
+        <link rel="stylesheet" type="text/css" href="/resurse/css/eroare.css" />
+        <%- include("../fragmente/head.ejs"); %>
+    </head>
+    <body>
+        <%- include("../fragmente/header.ejs"); %>
+
+        <main>
+            <div id="err-coloane">
+                <div id="err-imag">
+                    <img src="<%- locals.imagine %>" />
+                </div>
+                <section>
+                    <h2><%- locals.titlu %></h2>
+                    <p><%- locals.text %></p>
+                </section>
+            </div>
+        </main>
+
+        <%- include("../fragmente/footer.ejs"); %>
+    </body>
+</html>

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("/api/galerie_json")
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       const images = data.imagini;
       const gallery = document.querySelector(".dynamic-gallery");
 
@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const galleryInner = document.createElement("div");
       galleryInner.className = "dynamic-gallery-inner";
 
+      console.info("Selected images:", selectedImages);
+
       for (let i = 0; i < selectedImages.length; i++) {
         const item = document.createElement("figure");
         item.className = "dynamic-gallery-item";
@@ -27,13 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const picture = document.createElement("picture");
         const img = document.createElement("img");
-        img.src =
-          "/" + data.cale_galerie + "/" + selectedImages[i].cale_relativa;
-        img.alt = selectedImages[i].alternativ || selectedImages[i].nume_imag;
-        img.title = selectedImages[i].descriere_imag;
+        img.src = selectedImages[i].cale_relativa;
+        img.alt =
+          selectedImages[i].alternativ || selectedImages[i].descriere_imag;
+        img.title = selectedImages[i].cale_relativa;
 
         const figcaption = document.createElement("figcaption");
-        figcaption.textContent = `${selectedImages[i].nume_imag}`;
+        figcaption.textContent = `${selectedImages[i].descriere_imag}`;
 
         picture.appendChild(img);
 

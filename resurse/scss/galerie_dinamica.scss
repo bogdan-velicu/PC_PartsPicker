@@ -84,6 +84,9 @@
 
 // Media query to hide gallery on medium and small screens
 @media (max-width: 1000px) {
+    #galerie-dinamica {
+        display: none;
+    }
     .dynamic-gallery {
         display: none;
     }

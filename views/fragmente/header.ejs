@@ -1,11 +1,11 @@
 <header>
     <input type="checkbox" id="menuToggle" />
     <label for="menuToggle" class="menu-icon">
-        <img src="./resurse/imagini/gpu_medium.jpg" alt="logo" id="site-logo" />
+        <img src="/resurse/imagini/gpu_medium.jpg" alt="logo" id="site-logo" />
     </label>
     <nav class="topnav" id="topNav">
         <div class="dropdown">
-            <button class="dropbtn">
+            <button class="dropbtn" onclick="location.href='/'">
                 Acasa
                 <i class="fa fa-caret-down"></i>
             </button>
@@ -16,11 +16,17 @@
             </div>
         </div>
         <div class="dropdown">
-            <button class="dropbtn">
+            <button class="dropbtn" onclick="location.href='/produse'">
                 Produse
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
+                <% /* %> <% categories.forEach(category => { %>
+                <a href="/produse?categorie=<%= category %>"
+                    ><%= category.charAt(0).toUpperCase() + category.slice(1)
+                    %></a
+                >
+                <% }); %> <% */ %>
                 <a href="#procesoare">Procesoare</a>
                 <a href="#placi-video">Placi Video</a>
                 <a href="#placi-de-baza">Placi de Baza</a>
@@ -33,6 +39,6 @@
         </div>
         <a href="/#orar" class="nav-item">Orar</a>
         <a href="/#contact" class="nav-item">Contact</a>
-        <a href="/galerie" class="nav-item">Galerie</a>
+        <a href="/galerie_pagina" class="nav-item">Galerie</a>
     </nav>
 </header>
