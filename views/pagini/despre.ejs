@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <%- include('../fragmente/head.ejs') %>
+
+        <div id="banner">Velicu Bogdan</div>
+            <div id="watermark">
+                <p>Velicu</p>
+                <p>Bogdan</p>
+            </div>
+        </div>
+
+        <title>PC PartsPicker</title>
+
+        <!-- Different between pages -->
+        <meta name="keywords"
+            content="PC PartsPicker, magazin, PC, laptop, computer, componente, easybox, Bucuresti, Sector 4" />
+        <meta name="description"
+            content="PC PartsPicker - Magazin fizic si online pentru vanzare componente sau sisteme de tip PC / laptop + livrare prin intermediul easybox sau ridicare personala din Bucuresti, Sector 4." />
+    </head>
+
+    <body>
+        <%- include('../fragmente/header.ejs') %>
+        <main>
+            <div id="grid-pagina">
+                <section id="welcome">
+                    <!-- <h3 style="margin-bottom: 0;">Bine ati venit pe pagina noastra - <b>PC PartsPicker</b></h3>
+                    <h3 class="reflection">Bine ati venit pe pagina noastra - PC PartsPicker</h3> -->
+                    <div id="titlu">
+                        Bine ati venit pe pagina noastra - PC PartsPicker
+        				<div id="titlu-reflectat">
+           					Bine ati venit pe pagina noastra - PC PartsPicker
+        				</div>
+                    </div>
+                    <br />
+                    <video controls poster="resurse/imagini/pc_build.webp" preload="metadata" width="100%">
+                      <source src="/resurse/videos/intro-ai.mp4" type="video/mp4">
+                      <source src="/resurse/videos/intro-ai.webm" type="video/webm">
+
+                      <track src="/resurse/vtt/ro.vtt" kind="subtitles" srclang="ro" label="Română" default>
+                      <track src="/resurse/vtt/en.vtt" kind="subtitles" srclang="en" label="English">
+
+                      Your browser does not support the video tag.
+                    </video>
+                </section>
+                <section id="oferte">
+                    <h2>Oferte</h2>
+                    <hr class="styled-hr" />
+                    <section>
+                        <h3>Oferte Procesoare</h3>
+                        <p>
+                            Profitati de reducerile noastre de primavara la
+                            <b>procesoare</b>
+                        </p>
+                        <strong>O reducere de <s>10%</s> <ins>20%</ins> la toate
+                            procesoarele</strong>
+                    </section>
+                    <section id="oferte">
+                        <h3>Oferte Placi Video</h3>
+                        <p>
+                            Profitati de reducerile noastre de primavara la
+                            <b>placi video</b>
+                        </p>
+                        <strong>O reducere de <s>8%</s> <ins>15%</ins> la toate
+                            placile video</strong>
+                    </section>
+                </section>
+                <section id="orar">
+                    <h2>Orar</h2>
+                    <div class="table-container">
+                        <table id="tab-orar">
+                            <thead>
+                                <tr>
+
+                                    <th>Perioadă</th>
+                                    <th>Zi</th>
+                                    <th>Interval dimineata</th>
+                                    <th>Pauza de masa</th>
+                                    <th>Interval seară</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="5">Zile<br />Lucrătoare</td>
+                                    <td>Luni</td>
+                                    <td>10-12</td>
+                                    <td>12-14</td>
+                                    <td>14-20</td>
+                                </tr>
+                                <tr>
+                                    <td>Marti</td>
+                                    <td>9-12</td>
+                                    <td>12-14</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+                                    <td>Miercuri</td>
+                                    <td>9-11</td>
+                                    <td>11-13</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+                                    <td>Joi</td>
+                                    <td>9-11</td>
+                                    <td>11-13</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+                                    <td>Vineri</td>
+                                    <td>9-12</td>
+                                    <td>12-14</td>
+                                    <td>14-19</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Weekend</td>
+                                    <td>Sambata</td>
+                                    <td>10-12</td>
+                                    <td>12-13</td>
+                                    <td>13-16</td>
+                                </tr>
+                                <tr>
+                                    <td>Duminica</td>
+                                    <td>10-14</td>
+                                    <td>-</td>
+                                    <td>inchis</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5">
+                                        Închis cu ocazia sărbătorilor legale
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <caption>Orele de lucru</caption>
+                </section>
+                <section id="frame-video" style="min-height: 200px;">
+                    <div class="frame-row">
+                        <div id="frame-tabs" class="frame-column">
+                            <a href="https://sketchfab.com/models/249fb5e8c1e94686a2c2b1cd6df72bc5/embed?ui_theme=dark&dnt=1&autostart=1&camera=0"
+                                target="videoFrame">Procesor</a>
+                            <a href="https://sketchfab.com/models/a15a7202bd234623bd2d2228b8fdb8ec/embed?autostart=1&camera=0&ui_theme=dark&dnt=1"
+                                target="videoFrame">Placa Video</a>
+                            <a href="https://sketchfab.com/models/07e3eb8b4cca46ada63641bbd7c5a236/embed?autostart=1&camera=0&ui_theme=dark&dnt=1"
+                                target="videoFrame">RAM</a>
+                            <a href="https://sketchfab.com/models/4cec4b403f5b41e89690c000553c43bb/embed?autostart=1&camera=0&ui_theme=dark&dnt=1"
+                                target="videoFrame">Placa de Baza</a>
+                            <a href="https://sketchfab.com/models/b2face83ca2e463b96753761a23dba30/embed?autostart=1&camera=0&ui_theme=dark&dnt=1"
+                                target="videoFrame">SSD M2</a>
+                        </div>
+                        <div id="frame-container">
+                            <iframe name="videoFrame" height="400px" width="95%" title="RTX3060 X" frameborder="0"
+                                allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                                allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                                execution-while-out-of-viewport execution-while-not-rendered web-share
+                                src="https://sketchfab.com/models/a15a7202bd234623bd2d2228b8fdb8ec/embed?autostart=1&camera=0&ui_theme=dark&dnt=1">
+                            </iframe>
+                        </div>
+                    </div>
+                </section>
+                <section id="fig1">
+                    <h2>CPU Promoție</h2>
+                    <hr class="styled-hr" />
+                    <figure class="fg-img">
+                        <img src="resurse/imagini/ryzen_cpu.png" alt="cpu" />
+                        <figcaption>CPU AMD Ryzen 8800G</figcaption>
+                    </figure>
+                </section>
+                <section id="fig2">
+                    <h2>RAM Promoție</h2>
+                    <hr class="styled-hr" />
+                    <figure class="fg-img">
+                        <img src="resurse/imagini/ram.png" alt="ram" />
+                        <figcaption>RAM HyperX Fury</figcaption>
+                    </figure>
+                </section>
+                <!-- <figure id="fig3" class="fg-img">
+                    <img src="resurse/imagini/ssd_m2.png" alt="ssd" />
+                    <figcaption>SSD M2 Samsung</figcaption>
+                </figure> -->
+                </section>
+                <section id="anunturi">
+                    <h2>Anunțuri</h2>
+                    <hr class="styled-hr" />
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                        <div>
+                            <p>
+                                <time datetime="2022-01-05">5 ianuarie 2022</time>
+                                <strong>No more Covid!!!!</strong>
+                            </p>
+                            <p>
+                                <time datetime="2022-01-21">21 ianuarie 2022</time>
+                                <strong>Black Friday 2022</strong>
+                            </p>
+                            <p>
+                                <time datetime="2022-02-14">14 februarie 2022</time>
+                                <strong>Valentine's Day</strong>
+                            </p>
+                            <p>
+                                <time datetime="2022-03-08">8 martie 2022</time>
+                                <strong>Ziua Femeii</strong>
+                            </p>
+                            <p>
+                                <time datetime="2022-04-01">1 aprilie 2022</time>
+                                <strong>April's Fools</strong>
+                            </p>
+                        </div>
+                        <div class="duotone-image"></div>
+                    </div>
+                </section>
+                <section id="parteneri">
+                    <h2>Parteneri</h2>
+                    <hr class="styled-hr" />
+                    <p>
+                        Suntem mandri sa va anuntam ca am incheiat un
+                        parteneriat cu <b>EasyBox</b> pentru livrarea
+                        produselor noastre
+                        <a class="link-stilizat" href="https://sameday.ro/easybox/" target="_blank">mai multe informatii</a>
+                    </p>
+                </section>
+                </section>
+            </div>
+            <section id="galerie">
+                <h2>Galerie</h2>
+                <hr class="styled-hr" />
+                <%- include("../fragmente/galerie.ejs") %>
+            </section>
+            <section id="galerie-dinamica">
+                <h2>Galerie Dinamica</h2>
+                <hr class="styled-hr" />
+                <%- include("../fragmente/galerie_dinamica.ejs") %>
+            </section>
+        </main>
+        <br />
+
+        <%- include("../fragmente/footer.ejs") %>
+    </body>
+
+</html>
+
